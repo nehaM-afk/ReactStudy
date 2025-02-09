@@ -6,9 +6,9 @@ import React from 'react'
 //   )
 // }
 
-FRInput = () => {
+const FRInput = React.forwardRef((props, ref) => {
   return (
-        <input type="text" />
+        <input type="text" ref={ref}/>
       )
-}
+})
 export default FRInput

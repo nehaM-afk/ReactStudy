@@ -5,11 +5,15 @@ class FRParentInput extends Component {
    super(props)
    this.inputref = React.createRef();
  }
+
+ clickHandler = () => {
+  this.inputref.current.focus();
+ }
   render() {
     return (
       <div>FRParentInput
         <FRInput ref={this.inputref}/>
-        <button>Focus Input</button>
+        <button onClick={this.clickHandler}>Focus Input</button>
       </div>
     )
   }
