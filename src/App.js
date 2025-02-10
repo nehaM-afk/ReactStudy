@@ -13,7 +13,11 @@ import ParentComponent from './components/ParentComponent'
 import UserGreeting from './components/UserGreeting'
 import NameList from './components/NameList'
 import Stylesheet from './components/Stylesheet'
-import PortalDemo from './components/PortalDemo'
+import Hero from './components/Hero'
+import ClickCounterTwo from './components/ClickCounterTwo'
+import HoverCounterTwo from './components/HoverCounterTwo'
+import ComponentC from './components/ComponentC'
+import {UserProvider} from './components/UserContext'
 // function App() {
 //  return(
 //  <div>
@@ -25,9 +29,12 @@ import PortalDemo from './components/PortalDemo'
 class App extends Component{
     render(){
         return (
-            <div className= "App">
-               <PortalDemo/>
-            </div>
+        <div className="App">
+            <UserProvider value="Neha">
+            <ComponentC />
+            </UserProvider>
+           
+        </div>
         )
     }
 }
